@@ -1,2 +1,7 @@
 # Python
 venv
+.mypy_cache
+.pytest_cache
+slapping.egg-info
+__pycache__
+.coverage
