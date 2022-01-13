@@ -20,4 +20,20 @@ for i in data.json()['data']:
     
 temperatures.sort()
 
-print(temperatures)
+def main():
+    checkData = requests.post('https://tues2022.proxy.beeceptor.com/my/api/test')
+    checkTemperatures = []
+    
+    for i in data.json()['data']:
+        temp = i['temperature']
+        checkTemperatures.append(temp)
+
+    checkTemperatures.sort()
+
+    assert mintemp() == checkTemperatures[0]
+    assert mediumtemp() == checkTemperatures[2]
+    assert maxtemp() == checkTemperatures[4]
+
+
+if __name__ == '__main__':
+    main()
