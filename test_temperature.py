@@ -15,11 +15,14 @@ temperatures.sort()
 
 def test_mintemp():
     assert mintemp() == temperatures[0]
+    print('MIN:', temperatures[0])
 
 
 def test_mediumtemp():
     assert mediumtemp() == temperatures[2]
+    print('MEDIUM:', temperatures[2])
 
 
 def test_maxtemp():
     assert maxtemp() == temperatures[4]
+    print('MAX:', temperatures[4])
